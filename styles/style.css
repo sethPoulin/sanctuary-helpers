@@ -221,6 +221,92 @@ textarea {
   overflow: hidden;
 }
 
+.blogHeader {
+  height: 83vh;
+  background-image: url(../assets/blog-image.jpg);
+  background-size: auto;
+  background-position: -250px 0;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1050px) {
+  .blogHeader {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 880px) {
+  .blogHeader {
+    background-position: 50% 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogHeader {
+    background-position: 43% 0;
+  }
+}
+
+.blogHeader .topBar {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blogHeader h1 {
+  top: 40%;
+  left: 10%;
+  font-size: 5.6rem;
+  position: absolute;
+}
+
+@media (max-width: 540px) {
+  .blogHeader h1 {
+    top: unset;
+    bottom: 40%;
+  }
+}
+
+.blogAside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog {
+  width: 60%;
+  background: #f5f5f5;
+}
+
+.blog h2 {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.blog p:not(:first-of-type) {
+  padding-top: 20px;
+}
+
+.blog .content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+aside {
+  width: 22%;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -314,6 +400,12 @@ h3 {
   }
 }
 
+h5 {
+  padding-top: 20px;
+  width: 100px;
+  font-size: 1.6rem;
+}
+
 p {
   font-family: 'Lato', sans-serif;
   line-height: 2.5rem;
@@ -373,7 +465,7 @@ header.home {
   }
 }
 
-.home h1 {
+header.home > img h1 {
   font-size: 5.6rem;
   position: absolute;
   top: 10%;
@@ -382,7 +474,7 @@ header.home {
 }
 
 @media (max-width: 830px) {
-  .home h1 {
+  header.home > img h1 {
     font-size: 3rem;
     width: 100px;
     top: 30px;
@@ -391,13 +483,13 @@ header.home {
 }
 
 @media (max-width: 625px) {
-  .home h1 {
+  header.home > img h1 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 480px) {
-  .home h1 {
+  header.home > img h1 {
     left: 30px;
   }
 }
@@ -479,7 +571,7 @@ header .navigation {
           transform: scaleX(1.5);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
   .hamburger i {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);

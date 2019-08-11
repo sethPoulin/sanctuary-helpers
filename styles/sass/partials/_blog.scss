@@ -1,0 +1,101 @@
+// ===========blog header styles=============
+
+// @import "variables";
+// @import "mixins";
+
+.blogHeader {
+
+    // min-height: 430px;
+    height: 83vh;
+    background-image: url(../assets/blog-image.jpg);
+    background-size: auto;
+    background-position: -250px 0;
+    position: relative;
+    background-repeat: no-repeat;
+
+    @include mq(1050) {
+        // min-height: 208px;
+        // max-height: 208px;
+        // height: 208px;
+        background-size: cover;
+    }
+    
+    @include mq(880) {
+        // min-height: 208px;
+        // max-height: 208px;
+        // height: 208px;
+        background-position: 50% 0;
+    }
+
+    @include mq(480){
+        background-position: 43% 0;
+    }
+ 
+    // @include mq(400) {
+    //     background-position: -100px 0;
+    // }
+
+    // background: $white;
+
+    .topBar {
+        width: 80%;
+        // position: relative;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        // right: 0;
+        // top:50%;
+    }
+
+    h1 {
+        top: 40%;
+        left: 10%;
+        font-size: 5.6rem;
+        position: absolute;
+
+        @include mq(540) {
+            top: unset;
+            bottom: 40%;
+        }
+
+    }
+
+}
+
+.blogAside {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog {
+    width: 60%;
+    background: $white;
+
+    h2 {
+        font-size: 3rem;
+        line-height: 4.5rem;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    p:not(:first-of-type) {
+        padding-top: 20px;
+    }
+}
+
+.blog .content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+aside {
+    width: 22%;
+}
+
+    
+
+
+

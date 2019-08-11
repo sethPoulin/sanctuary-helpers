@@ -1,6 +1,7 @@
 @import "partials/variables.scss";
 @import "partials/setup.scss";
 @import "partials/mixins.scss";
+@import "partials/blog.scss";
 
 
 html {
@@ -94,6 +95,12 @@ h3 {
     }
 }
 
+h5 {
+    padding-top: 20px;
+    width: 100px;
+    font-size: 1.6rem;
+}
+
 p {
     font-family: 'Lato', sans-serif;
     line-height: 2.5rem;
@@ -142,31 +149,33 @@ header.home > img {
         width: 600px;
         transform: translateX(-38%);
     }
-}
 
-.home h1 {
-    font-size: 5.6rem;
-    position: absolute;
-    top:10%;
-    left: 18%;
-    width: 400px;
-
-    @include mq(830) {
-        font-size: 3rem;
-        width: 100px;
-        top: 30px;
-        font-size: 4rem;
-    }
-
-    @include mq(625){
-        font-size: 3rem;
-    }
-
-    @include mq(480){
-        left: 30px;
-    }
+    h1 {
+        font-size: 5.6rem;
+        position: absolute;
+        top:10%;
+        left: 18%;
+        width: 400px;
     
+        @include mq(830) {
+            font-size: 3rem;
+            width: 100px;
+            top: 30px;
+            font-size: 4rem;
+        }
+    
+        @include mq(625){
+            font-size: 3rem;
+        }
+    
+        @include mq(480){
+            left: 30px;
+        }
+        
+    }
 }
+
+
 
 header.home .imageContainer {
     width: 55%;
@@ -237,7 +246,7 @@ header .navigation {
     i {
     transform: scaleX(1.5);
 
-        @include mq(400) {
+        @include mq(414) {
         transform: scaleX(1);
         }
     }
@@ -361,10 +370,6 @@ header .navigation {
 
 
 // ===========home gallery styles==============
-
-// .gallery * {
-//     border: 1px solid tomato;
-// }
 
 .gallery {
 
