@@ -1,0 +1,710 @@
+@import "partials/variables.scss";
+@import "partials/setup.scss";
+@import "partials/mixins.scss";
+
+
+html {
+    font-size: 62.5%;
+}
+
+.allCaps {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.ital {
+    font-style: italic;
+}
+
+.flex {
+    display: flex;
+}
+
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+  
+.skipLink:focus {
+        left: 10px;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+a.skipLink {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+a.button {
+    color: $white;
+    background: $evergreen;
+    padding: 12px 16px 5px;
+    border: 2px solid $evergreen;
+    font-size: 1.8rem;
+    line-height: -1rem;
+    margin-top: 10px;
+
+    &:hover {
+        background: transparent;
+        color: $evergreen;
+    }
+
+}
+
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Kumar One Outline', cursive;
+}
+
+h2, h3, h4, h5, a, label, button {
+    text-transform: uppercase;   
+    font-family: 'Kumar One', cursive;
+    letter-spacing: 0.2rem;
+}
+
+h2 {
+    font-size: 3.3rem;
+    line-height: 5.8rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+    line-height: 5.2rem;
+
+    @include mq(1120) {
+        font-size: 2rem;
+    }
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    padding-bottom: 15px;
+    letter-spacing: 0.1rem;
+}
+
+body {
+    background:$ice;
+    max-width: 1280px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.justifyLeft {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+// ===========home header styles===============
+
+
+header.home {
+    position: relative;
+}
+
+header.home > img {
+
+    @include mq(480){
+        width: 600px;
+        transform: translateX(-22%);
+    }
+
+    @include mq(440){
+        width: 600px;
+        transform: translateX(-29%);
+    }
+
+    @include mq(380){
+        width: 600px;
+        transform: translateX(-38%);
+    }
+}
+
+.home h1 {
+    font-size: 5.6rem;
+    position: absolute;
+    top:10%;
+    left: 18%;
+    width: 400px;
+
+    @include mq(830) {
+        font-size: 3rem;
+        width: 100px;
+        top: 30px;
+        font-size: 4rem;
+    }
+
+    @include mq(625){
+        font-size: 3rem;
+    }
+
+    @include mq(480){
+        left: 30px;
+    }
+    
+}
+
+header.home .imageContainer {
+    width: 55%;
+    position: absolute;
+    bottom:-21%;
+
+    @include mq(625){
+        display: none;
+    }
+}
+
+header .navigation {
+    position: absolute;
+    top:3%;
+    right:5%;
+}
+
+.navigation ul {
+    display: flex;
+
+    @include mq(1050) {
+        display: none;
+    }
+  
+    li {
+        padding: 0;
+        position: relative;
+    }
+
+    a {
+        padding: 10px 20px;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.8rem;  
+        letter-spacing: 0.1rem;
+    }
+
+    // yellow underline for hover effect
+
+    a::after {
+        content: '';
+        height: 2px;
+        background: $brightYellow;
+        width: 75%;
+        position: absolute;
+        bottom: -5px;
+        right: 13%;
+        display: none;
+    }
+
+    a:hover::after {
+        display: unset;
+    }
+}
+
+.hamburger {
+    
+    display: none;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    color: $black;
+    font-size: 3.4rem;
+
+    @include mq(1050) {
+        display: block;    
+    }
+    
+    i {
+    transform: scaleX(1.5);
+
+        @include mq(400) {
+        transform: scaleX(1);
+        }
+    }
+}
+
+
+// home about styles==========================
+
+
+.about {
+
+    background: $white;
+    @include mq(825){
+        background: rgb(230, 228, 228);
+    }
+    
+    .wrapper {
+    width: 80%;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    display: flex;
+    margin: 0 auto;
+
+    @include mq(825) {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;    
+        }
+    }
+
+    .leftSide {
+        width: 60%;
+
+        @include mq(825){
+            order:2;
+            width: 100%;
+            background: $white;
+            padding: 50px 0;
+        }
+    }    
+    
+    .rightSide {
+        width: 40%;
+
+        @include mq(825){
+            width: 100%;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        } 
+    }
+
+    .justifyLeft {
+        width: 100%;
+
+        @include mq(825){
+
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        @include mq(420){
+            width:85%;
+        }
+    }
+
+    .imageContainer {
+        width: 55%;
+        margin: 0 auto;
+        @include bxs(-15,15);
+
+        @include mq(860){
+            width: 90%;
+            margin: 0 -40px 0 auto;
+        }
+
+        @include mq(825){
+            width: 50%;
+            margin: 30px auto;
+        }  
+    }
+
+    h3 {
+        @include mq(1120) {
+            font-size: 2.1rem;
+        }
+
+        @include mq(926) {
+            line-height: 2.8rem;
+        }
+
+        @include mq(825){
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include mq(625) {          
+            font-size: 1.8rem;
+        }
+
+        @include mq(540){
+            width:100%
+        }
+
+        @include mq(395){
+            line-height: 3rem;
+            padding-bottom: 10px;
+        }
+    }
+    
+    a {
+        @include mq(825){
+            margin: 0 auto;
+        }
+
+        @include mq(625) {            
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+// ===========home gallery styles==============
+
+// .gallery * {
+//     border: 1px solid tomato;
+// }
+
+.gallery {
+
+
+    ul {
+        width: 80%; 
+        margin: 0 auto;
+        display: flex;
+        padding: 80px 0;  
+        
+        @include mq(625){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5%;
+            padding: 40px 0;
+        }
+
+    }
+
+    li {
+        width: calc((100% - 40px) / 3);
+
+        @include mq(625) {
+            width: 100%;
+        }
+    }
+
+    li:nth-child(2) {
+        margin: 0 20px;
+   
+        @include mq(625){
+            display: none;
+        }
+   
+    }
+    
+}
+
+// ==========home resources styles==================
+
+.resources {
+    background: $white;
+
+    .wrapper {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 60px 0;
+        align-items: flex-start;
+    }
+
+    .bullet {
+        width: 50%;
+        display: flex;
+    }
+
+    i {
+        font-size: 2rem;
+        background: $brightYellow;
+        border-radius: 50%;
+        height: 40px; 
+    }
+
+    .bullet1 i {
+        padding-top: 8px;
+        padding-bottom: 15px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .bullet2 i {
+        padding-top: 7px;
+        padding-bottom: 10px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .bullet3 i {
+        padding-top: 8px;
+        padding-bottom: 15px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .bullet4 i {
+        padding-top: 8px;
+        padding-bottom: 15px;
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    a {
+        display: block;
+    }
+
+    .copy {
+        padding: 0 15px;
+    }
+
+    @include mq(890) {
+        h3 {
+            line-height: 2.8rem;
+        }
+    }
+
+    @include mq(715) {
+        .wrapper {
+            flex-direction: column;
+        }
+
+        .bullet {
+            width:100%;
+            padding-bottom: 10px;
+        }
+    }
+
+    @include mq(420) {
+        
+        .wrapper {
+            width: 90%;
+        }
+    }
+
+    @include mq(350) {
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
+
+    @include mq(330) {
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+}
+// ==============home more info styles=============
+
+
+.moreInfo {
+
+    a {
+        display: inline-block;
+    }   
+
+    .imageContainer, .justifyRight, .justifyLeft {
+        width: 50%;
+    }
+
+    .imageContainer {
+        position: relative;
+    }
+
+    .justifyRight {
+        order: -1;
+
+        .container {
+            width: 80%;
+            padding-top: 30px;
+            padding-left: 15%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;  
+        }
+
+        p{
+            text-align: right;
+        }
+    }
+
+    .justifyLeft {
+        
+        .container {
+            width: 80%; 
+            padding-left: 15%; 
+            padding-top: 50px; 
+        }
+    }  
+
+    @include mq(1010) {
+        h3 {
+            font-size: 1.8rem;  
+        }
+    
+        .topStrip .container, .middleStrip .container {
+            padding-top: 20px;
+            width: 90%;
+        }
+    }
+
+    @include mq(851) {
+
+        .topStrip {
+            margin-bottom: 30px;
+        }
+        .topStrip, .middleStrip {
+
+            img {
+                position: static;
+                box-shadow: none;
+                width: 100%;
+                padding-top: 40px;
+            }
+        }
+
+        a {
+            font-size: 1.6rem;
+            padding: 14px 14px 6px;
+        }
+    }
+
+    @include mq(690) {
+        
+        h3 {
+            line-height: 4rem;
+        }
+        
+        .topStrip .container {
+            padding-top: 20px;
+        }
+
+        .topStrip, .middleStrip {
+            display: block;
+        }
+
+        .imageContainer {
+            width: 100%;
+            padding-top: 0;
+        
+            img {
+                padding-top: 0;
+            }
+        }
+
+        .justifyLeft, .justifyRight {
+            width: 100%;
+            text-align: center;
+
+            .container {
+                display: block;
+                width: 90%;
+                padding-left: 0;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }  
+    }   
+}
+
+.topStrip, .middleStrip {
+    display: flex;
+    margin-bottom: 60px;
+
+    img {
+        width: 80%;
+    }
+}
+
+.topStrip img {
+    box-shadow: 20px 20px 0 -5px $brightYellow;
+    position: absolute;
+    top: -25px;   
+}
+
+.middleStrip {
+
+    @include mq(1010) {
+        .container {
+        padding: 0;
+        }
+    }
+        
+    margin-bottom: 50px;
+    
+    img {
+        width: 85%;
+        position: absolute;
+        right:0;
+        box-shadow: -20px 20px 0 -5px $brightYellow;
+    }
+}
+
+// ============home search styles================
+
+.search {
+
+    background: $white;
+
+    .justifyCenter {
+ 
+        width: 80%;
+        margin: 0 auto;
+        padding: 120px 0;
+        text-align: center;
+
+        @include mq(820) {
+            padding: 60px 0;
+        }
+
+        @include mq(690) {
+            width: 90%;
+        }
+    }
+
+    p {
+        padding-bottom: 40px;
+    }
+}
+
+// all pages footer styles
+
+footer {
+    background: $black;
+    color: $white;
+    // text-align: center;
+    display: flex;
+    // margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    
+    p {
+        padding: 0;
+        display: inline-block;
+        line-height: 4.2rem;
+        
+    }
+
+}
+
+
+
+// ============blog header styles==================
+
+header.blog {
+    background-image: url(../assets/blog-image.jpg);
+    background-size: cover;
+}
+

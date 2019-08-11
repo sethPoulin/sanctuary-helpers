@@ -1,0 +1,45 @@
+@mixin mq($maxWidth) {
+    @media(max-width: #{$maxWidth}px) {
+        @content;
+    }
+}
+
+@mixin bxs($hOffset, $vOffset) {
+    box-shadow: #{$hOffset}px #{$vOffset}px #f8fb05;
+}
+
+// @mixin font($fontStyle, $fontFallback: sans-serif, $fontSize: 1.6rem, $lineHeight) {
+//     font-family: $fontStyle, sans-serif;
+//     font-size:
+// }
+
+
+
+// font-family: 'Lato', sans-serif;
+
+// font-family: 'Kumar One', cursive;
+
+// font-family: 'Kumar One Outline', cursive;
+
+
+
+
+// Heading (Sanctuary..., blog, get in touch)
+// KumarOneOutline, Regular, 68px
+// Line height: 64px
+// Headings (customized..., commu...,blog, get in, group...new location, search by ...))
+// KumarOne, Regular, 33px
+// Line height: 58px, Letter spacing: 2.1px
+// logo
+// KumarOne, Regular, 22px
+// Line height: 24px, Letter spacing: 1.2px
+// Navigation
+// Lato, Bold, 20px
+// Center, Line height: 29px, Letter spacing: 1.4px
+// button
+// KumarOne, Regular, 20px
+// Center, Line height: 32px, Letter spacing: 1px
+// body text
+// Lato, Regular, 20px
+// Line height: 32px, Letter spacing: 2px
+
