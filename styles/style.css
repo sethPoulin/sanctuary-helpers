@@ -280,11 +280,57 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .blog {
   width: 60%;
   background: #f5f5f5;
+  position: absolute;
+  top: -25%;
+}
+
+.blog::before {
+  content: '';
+  width: calc(100% + 5px);
+  height: 5px;
+  bottom: -5px;
+  background-color: red;
+  position: absolute;
+}
+
+.blog::after {
+  content: '';
+  height: calc(100% - 30px);
+  width: 5px;
+  right: -5px;
+  bottom: 0;
+  background-color: red;
+  position: absolute;
+}
+
+.blog .imageContainer {
+  position: relative;
+}
+
+.blog .imageContainer::before {
+  content: '';
+  width: calc(100% - 25px);
+  height: 20px;
+  bottom: -20px;
+  right: -5px;
+  background-color: red;
+  position: absolute;
+}
+
+.blog .imageContainer::after {
+  content: '';
+  height: calc(100% - 30px);
+  width: 20px;
+  right: -5px;
+  bottom: 0;
+  background-color: red;
+  position: absolute;
 }
 
 .blog h2 {
