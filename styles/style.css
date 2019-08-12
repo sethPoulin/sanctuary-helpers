@@ -304,6 +304,7 @@ h2 {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
+  margin-bottom: -141px;
 }
 
 @media (max-width: 700px) {
@@ -406,6 +407,7 @@ h2 {
 .blog .content {
   width: 75%;
   margin: 0 auto 0 17%;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 415px) {
@@ -547,10 +549,7 @@ aside .imageContainer::before {
 
 section.comments {
   width: 60%;
-}
-
-section.comments * {
-  border: 1px solid tomato;
+  padding-top: 50px;
 }
 
 section.comments .wrapper {
@@ -561,6 +560,10 @@ section.comments article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+section.comments h3 {
+  padding-bottom: 30px;
 }
 
 section.comments h6 {
@@ -585,6 +588,81 @@ section.comments article:nth-of-type(2) img {
 
 section.comments .content {
   padding-left: 30px;
+}
+
+form {
+  padding-bottom: 80px;
+}
+
+form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+form label {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+}
+
+form button[type="submit"] {
+  width: 100%;
+}
+
+form .formBox.name, form .formBox.email {
+  width: calc(50% - 15px);
+}
+
+form .formBox.name label, form .formBox.name input, form .formBox.email label, form .formBox.email input {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  border: none;
+}
+
+form .formBox.name input, form .formBox.email input {
+  background-color: transparent;
+  border-bottom: 2px solid #065635;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  padding-left: 30px;
+}
+
+form .formBox.name label, form .formBox.email label {
+  padding-left: 30px;
+}
+
+form .formBox.name {
+  margin-right: 15px;
+}
+
+form .formBox.email {
+  margin-left: 15px;
+}
+
+form .formBox.comment {
+  width: 100%;
+  border: 2px solid #065635;
+  margin-top: 30px;
+}
+
+form .formBox.comment label, form .formBox.comment textarea {
+  display: block;
+  width: 100%;
+}
+
+form .formBox.comment label {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+form .formBox.comment textarea {
+  background-color: transparent;
+  padding-top: 30px;
+  border: none;
 }
 
 html {
@@ -638,7 +716,7 @@ a {
   color: #151514;
 }
 
-a.button {
+a.button, button[type="submit"] {
   color: #f5f5f5;
   background: #065635;
   padding: 12px 16px 5px;
@@ -648,7 +726,7 @@ a.button {
   margin-top: 10px;
 }
 
-a.button:hover {
+a.button:hover, button[type="submit"]:hover {
   background: transparent;
   color: #065635;
 }

@@ -86,12 +86,18 @@
             </article>
             <form action="">
                 <fieldset class="userComment">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="comment" placeholder="">
-                    <label for="email">Email address</label>
-                    <input type="email" id="email" name="comment" placeholder="">
-                    <label for="commentArea">Comment</label>
-                    <textarea name="comment" id="commentArea" cols="30" rows="10"></textarea>
+                    <div class="formBox name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="comment" placeholder="">
+                    </div>
+                    <div class="formBox email">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="comment" placeholder="">
+                    </div>
+                    <div class="formBox comment">
+                        <label for="commentArea">Comment</label>
+                        <textarea name="comment" id="commentArea" cols="30" rows="10"></textarea>
+                    </div>
                 </fieldset>
                 <button type="submit">Submit comment</button>
             </form>
