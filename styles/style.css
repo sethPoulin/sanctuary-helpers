@@ -552,8 +552,28 @@ section.comments {
   padding-top: 50px;
 }
 
+@media (max-width: 850px) {
+  section.comments {
+    width: 100%;
+  }
+}
+
 section.comments .wrapper {
   margin-left: 17%;
+}
+
+@media (max-width: 850px) {
+  section.comments .wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 550px) {
+  section.comments .wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 section.comments article {
@@ -567,7 +587,14 @@ section.comments h3 {
 }
 
 section.comments h6 {
-  padding-bottom: 15px;
+  padding-bottom: 5px;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 630px) {
+  section.comments p {
+    padding-bottom: 20px;
+  }
 }
 
 section.comments img:first-of-type {
@@ -576,6 +603,12 @@ section.comments img:first-of-type {
   width: 80%;
   -o-object-position: 0 0;
      object-position: 0 0;
+}
+
+@media (max-width: 630px) {
+  section.comments img:first-of-type {
+    display: none;
+  }
 }
 
 section.comments article:nth-of-type(2) img {
@@ -588,6 +621,12 @@ section.comments article:nth-of-type(2) img {
 
 section.comments .content {
   padding-left: 30px;
+}
+
+@media (max-width: 630px) {
+  section.comments .content {
+    padding-left: 0;
+  }
 }
 
 form {
@@ -603,6 +642,12 @@ form fieldset {
   width: 100%;
 }
 
+@media (max-width: 700px) {
+  form fieldset {
+    display: block;
+  }
+}
+
 form label {
   font-size: 1.6rem;
   font-family: 'Lato', sans-serif;
@@ -612,8 +657,20 @@ form button[type="submit"] {
   width: 100%;
 }
 
+@media (max-width: 330px) {
+  form button[type="submit"] {
+    font-size: 1.6rem;
+  }
+}
+
 form .formBox.name, form .formBox.email {
   width: calc(50% - 15px);
+}
+
+@media (max-width: 700px) {
+  form .formBox.name, form .formBox.email {
+    width: 100%;
+  }
 }
 
 form .formBox.name label, form .formBox.name input, form .formBox.email label, form .formBox.email input {
@@ -639,8 +696,20 @@ form .formBox.name {
   margin-right: 15px;
 }
 
+@media (max-width: 700px) {
+  form .formBox.name {
+    margin-right: 0;
+  }
+}
+
 form .formBox.email {
   margin-left: 15px;
+}
+
+@media (max-width: 700px) {
+  form .formBox.email {
+    margin-left: 0;
+  }
 }
 
 form .formBox.comment {

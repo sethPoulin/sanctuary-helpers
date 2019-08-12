@@ -331,9 +331,23 @@ section.comments {
     width: 60%;
     padding-top:50px;
 
+    @include mq(850) {
+        width: 100%;
+    }
+
     .wrapper {
         // width: 60%;
         margin-left: 17%;
+
+        @include mq(850) {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include mq(550) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 
     article {
@@ -345,7 +359,14 @@ section.comments {
     }
 
     h6 {
-        padding-bottom: 15px;
+        padding-bottom: 5px;
+        line-height: 2.5rem;
+    }
+
+    p {
+        @include mq(630) {
+            padding-bottom: 20px;
+        }
     }
 
 
@@ -353,6 +374,11 @@ section.comments {
         object-fit: contain;
         width: 80%;
         object-position: 0 0;
+
+        @include mq(630) {
+            display: none;
+        }
+
     }
 
     article:nth-of-type(2) img {
@@ -364,6 +390,10 @@ section.comments {
 
     .content {
         padding-left: 30px;
+
+        @include mq(630) {
+            padding-left: 0;
+        }
     }
 }
 
@@ -380,6 +410,10 @@ form {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+
+        @include mq(700) {
+            display: block;
+        }
     }
 
     label {
@@ -389,10 +423,19 @@ form {
 
     button[type="submit"] {
         width: 100%;
+
+        @include mq(330) {
+            font-size: 1.6rem;
+        }
+
     }
 
     .formBox.name, .formBox.email {
         width: calc(50% - 15px);
+
+        @include mq(700) {
+            width: 100%;
+        }
         
         label, input {
             display: block;
@@ -417,10 +460,19 @@ form {
 
     .formBox.name {
         margin-right: 15px;
+    
+        @include mq(700) {
+            margin-right: 0;
+        }
+    
     }
 
     .formBox.email {
         margin-left: 15px;
+
+        @include mq(700) {
+            margin-left: 0;
+        }
     }
 
 
