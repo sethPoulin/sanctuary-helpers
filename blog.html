@@ -48,46 +48,54 @@
                 <div class="imageContainer">
                     <img src="assets/sidebar-image.jpg" alt="Modern pear-shaped wireframe light fixture.">
                 </div>
-                <div class="sidebar">
-                    <h4>Our mission</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illo, officiis nemo.</p>
-                    <p>Find out more.</p>
-                </div>
-                <div class="sidebar">
-                    <h4>Recent Posts</h4>
-                    <ul>
-                        <li>Donec facilisis tortor ut</li>
-                        <li>Augue lacinia at viverra</li>
-                        <li>Semper sed sapien metus</li>
-                        <li>Scelerisque nec pharetra</li>
-                    </ul>
+                <div class="content">
+                    <div class="sidebar">
+                        <h4>Our mission</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illo, officiis nemo.</p>
+                        <p>Find out more.</p>
+                    </div>
+                    <div class="sidebar">
+                        <h4>Recent Posts</h4>
+                        <ul>
+                            <li>Donec facilisis tortor ut</li>
+                            <li>Augue lacinia at viverra</li>
+                            <li>Semper sed sapien metus</li>
+                            <li>Scelerisque nec pharetra</li>
+                        </ul>
+                    </div>
                 </div>
             </aside>
         </div>  <!-- end div .blogAside -->
     </main>
     <section class="comments">
-        <h3>Comments:</h3>
-        <article>
-            <img src="assets/comment-image.jpg" alt="Young asian man looking at camera with serious expression.">
-            <h5>Tuesday October 9th, 2019 by Davin</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet pariatur facere corrupti perferendis quia quisquam totam fugit, ipsa atque accusamus quaerat voluptate laborum ratione libero, excepturi soluta laboriosam doloremque reiciendis sed tempora quidem error eaque corporis. Iste, quasi exercitationem!</p>   
-        </article>
-        <article>
-            <img src="assets/comment-image2.jpg" alt="Two zebras facing each other with necks touching.">
-            <h5>Wednesday October 10th, 2019 by Lisa</h5>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, quaerat asperiores eum culpa cumque qui! Asperiores, quidem! Quas eveniet eius perferendis similique eligendi laudantium voluptates?</p>
-        </article>
-        <form action="">
-            <fieldset class="userComment">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="comment" placeholder="">
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="comment" placeholder="">
-                <label for="commentArea">Comment</label>
-                <textarea name="comment" id="commentArea" cols="30" rows="10"></textarea>
-            </fieldset>
-            <button type="submit">Submit comment</button>
-        </form>
+        <div class="wrapper">
+            <h3>Comments:</h3>
+            <article>
+                <img src="assets/comment-image.jpg" alt="Young asian man looking at camera with serious expression.">
+                <div class="content">
+                    <h6>Tuesday October 9th, 2019 by Davin</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet pariatur facere corrupti perferendis quia quisquam totam fugit, ipsa atque accusamus quaerat voluptate laborum ratione libero, excepturi soluta laboriosam doloremque reiciendis sed tempora quidem error eaque corporis. Iste, quasi exercitationem!</p>
+                </div>   
+            </article>
+            <article>
+                <img src="assets/comment-image2.jpg" alt="Two zebras facing each other with necks touching.">
+                <div class="content">
+                    <h6>Wednesday October 10th, 2019 by Lisa</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, quaerat asperiores eum culpa cumque qui! Asperiores, quidem! Quas eveniet eius perferendis similique eligendi laudantium voluptates?</p>
+                </div>
+            </article>
+            <form action="">
+                <fieldset class="userComment">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="comment" placeholder="">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="comment" placeholder="">
+                    <label for="commentArea">Comment</label>
+                    <textarea name="comment" id="commentArea" cols="30" rows="10"></textarea>
+                </fieldset>
+                <button type="submit">Submit comment</button>
+            </form>
+        </div>
     </section>  <!-- end section.comments -->
     <footer>
         <p>Copyright © 2019 HackerYou</p>

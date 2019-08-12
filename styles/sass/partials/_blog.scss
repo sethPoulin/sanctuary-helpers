@@ -3,6 +3,22 @@
 // @import "variables";
 // @import "mixins";
 
+h2 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+    @include mq(470) {
+        font-size: 3rem;
+    }
+
+    @include mq(415) {
+        font-size: 2.4rem;
+        line-height: 4rem;
+    }
+}
+
 .blogHeader {
 
     // min-height: 430px;
@@ -45,11 +61,6 @@
         justify-content: space-between;
     }
 
-    .navigation {
-        // right: 0;
-        // top:50%;
-    }
-
     h1 {
         top: 40%;
         left: 10%;
@@ -70,6 +81,11 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+
+    @include mq(700) {
+        display: block;
+    }
+
 }
 
 .blog {
@@ -79,6 +95,11 @@
     position: relative;
     top: -143px;
 
+    @include mq(700) {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
     &::before {
         content: '';
         width: calc(100% + 5px);
@@ -87,6 +108,10 @@
         background: $brightYellow;
         // background-color: red;
         position: absolute;
+
+        @include mq(550) {
+            width: 100%;
+        }
     }
 
     &::after {
@@ -98,6 +123,10 @@
         background: $brightYellow;
         // background-color: red;
         position: absolute;
+
+        @include mq(550) {
+            right: 0;
+        }
     }
 
     img {
@@ -120,6 +149,11 @@
             // background-color: red;
             position: absolute;
             // z-index: 10;
+
+            @include mq(550) {
+                width: 100%;
+                right: 0;
+            }
         }
     
         &::after {
@@ -132,15 +166,11 @@
             // background-color: red;
             position: absolute;
             // z-index: 10;
-        }
-    }
-    
 
-    h2 {
-        font-size: 3rem;
-        line-height: 4.5rem;
-        padding-top: 40px;
-        padding-bottom: 10px;
+            @include mq(550) {
+                right: 0;
+            }
+        }
     }
 
     p:not(:first-of-type) {
@@ -149,8 +179,13 @@
 }
 
 .blog .content {
-    width: 80%;
-    margin: 0 auto;
+    width: 75%;
+    margin: 0 auto 0 17%;
+
+    @include mq(415) {
+        width: 90%;
+        margin: 0 auto;
+    }
     // position: relative;
 
     
@@ -166,7 +201,20 @@ aside {
     width: 22%;
     background-color: $brightYellow;
     position: relative;
-    border: 1px solid rgba(126, 124, 124, 0.5);
+    
+
+    @include mq(700) {
+        display: flex;
+        width: 100%;
+        top:-138px;
+    }
+
+    @include mq(550) {
+        display: block;
+        padding-top: 15px;
+        
+    }
+    
 
     &::before {
         content: '';
@@ -176,8 +224,13 @@ aside {
         position: absolute;
         left: -15px;
         bottom: 0;
-
     }
+
+    // .content {
+    //     @include mq(440) {
+    //         width: 90%;
+    //     }
+    // }
 
     h4, p, li {
         padding-left: 10px;
@@ -191,6 +244,10 @@ aside {
     p {
         padding-bottom: 0;
         width: 90%;
+
+        // @include mq(440) {
+        //     width: 100%;
+        // }
     }
 
     p:first-of-type {
@@ -207,17 +264,45 @@ aside {
         padding-bottom: 25px;
         padding-top: 0;
         margin-top: -10px;
+
+        @include mq(800) {
+            padding-left: 15px;
+        }
+
+        @include mq(700) {
+            padding-left: 30px;
+        }
     
         li {
             list-style-type: initial;
             padding: 5px 0 0 0;
-            // padding-bottom: ;
+            
+            @include mq(800) {
+                width: 110px;    
+            }
+
+            @include mq(700) {
+                width: initial;
+            }
         }
     
     }
 
     .imageContainer {
         position: relative;
+        border-top: 1px solid rgba(126, 124, 124, 0.5);
+
+        @include mq(550) {
+            height: 225px;
+            border-top: none;
+            overflow: hidden;
+
+            img {
+                height: 300px;
+                width: unset;
+                margin-top:-91px;
+            }
+        }
     }
 
     .imageContainer::before {
@@ -228,10 +313,57 @@ aside {
         position: absolute;
         top:0;
 
+        @include mq(550) {
+            display: none;
+        }
+    }
+
+    .content {
+        @include mq(700) {
+            padding-left: 20px;
+        }
+    }
+}
+
+section.comments {
+
+    width: 60%;
+
+    * {
+        border: 1px solid tomato;
+    }
+
+    .wrapper {
+        // width: 60%;
+        margin-left: 17%;
+    }
+
+    article {
+        display:flex;
+    }
+
+    h6 {
+        padding-bottom: 15px;
+    }
+
+
+    img:first-of-type {
+        object-fit: contain;
+        width: 80%;
+        object-position: 0 0;
+    }
+
+    article:nth-of-type(2) img {
+        object-fit: contain;
+        width: 51%;
+        object-position: 0 0;
 
     }
 
-    
+    .content {
+        padding-left: 30px;
+    }
+
 
 
 
