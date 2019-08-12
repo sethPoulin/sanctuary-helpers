@@ -95,13 +95,17 @@ h3 {
     }
 }
 
+h4 {
+    font-size: 1.8rem;
+}
+
 h5 {
     padding-top: 20px;
     width: 100px;
     font-size: 1.6rem;
 }
 
-p {
+p, aside li {
     font-family: 'Lato', sans-serif;
     line-height: 2.5rem;
     font-size: 1.6rem;
