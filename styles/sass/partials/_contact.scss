@@ -36,26 +36,22 @@
     ul {
         position: relative;
         right: -30px;
-        // top: 50px;
-        // right: 0;
     }
 
     h5 {
         position: unset;
     }
 
-    // added extra specificity to override styles set in styles.scss
+    // added extra specificity to override .navigation styles set in styles.scss
 
     .topWrapper .navigation.contactNav {
         top: 20px;
-        background: red;
-        position: relative;
+        right: 0;
 
         // This media query is added to take position absolute off of the .navigation element so that the hamburger is no longer positioned relative to the nav and is instead positioned relative to the body.
         @include mq(1050) {
             position: unset;
         }
-        
     }
 
     .hamburger {
@@ -72,12 +68,67 @@
             object-position: -228px;
         }
     }
+}
+
+.commentBottomLeft {
+    width: 70%;
+    margin-bottom: -30px;
 
     form {
+        width: 100%;
+        background: $white;
+        box-shadow: 20px 20px 0 -5px $brightYellow;
+        position: relative;
+        top: -120px;
+        left: 20px;
+        padding-bottom: 40px;
+    }
+}
 
+.contactBottom .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+
+    .formContents {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    button {
+        margin-top: 40px;
+    }
+}
+
+.commentBottomRight {
+    padding-left: 11%; 
+    
+    ul {
+        display: flex;
+        margin-top: 70px;
+        padding-left: 0;
+        position: relative;
+        left: -12px;
+    }
+
+    a {
+        font-size: 2rem;
+        color: $evergreen;
+        padding: 9px;
+
+        &:hover {
+            color: $black;
+        }
     }
 
 
+    p.email {
+        margin: 15px 0;
+    }
 
-
+    p {
+        padding-bottom: 0;
+        line-height: 2.5rem;
+    }
 }
+

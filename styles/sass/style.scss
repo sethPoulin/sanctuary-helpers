@@ -2,7 +2,7 @@
 @import "partials/setup.scss";
 @import "partials/mixins.scss";
 @import "partials/blog.scss";
-@import "partials/contact.scss";
+
 
 
 html {
@@ -728,4 +728,6 @@ header.blog {
     background-image: url(../assets/blog-image.jpg);
     background-size: cover;
 }
+
+@import "partials/contact.scss";
 
