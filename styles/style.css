@@ -293,7 +293,7 @@ h2 {
   }
 }
 
-.blogAside {
+.blogAside.outerWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,7 +308,7 @@ h2 {
 }
 
 @media (max-width: 700px) {
-  .blogAside {
+  .blogAside.outerWrapper {
     display: block;
   }
 }
@@ -734,6 +734,81 @@ form .formBox.comment textarea {
   border: none;
 }
 
+.contact h1 {
+  width: 500px;
+  left: 10%;
+  top: 130px;
+}
+
+@media (max-width: 960px) {
+  .contact h1 {
+    font-size: 4.6rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .contact h1 {
+    top: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact h1 {
+    top: 100px;
+    width: 200px;
+  }
+}
+
+.contact .outerWrapper {
+  position: relative;
+}
+
+.contact .topWrapper {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+.contact ul {
+  position: relative;
+  right: -30px;
+}
+
+.contact h5 {
+  position: unset;
+}
+
+.contact .navigation {
+  position: absolute;
+  top: 20px;
+}
+
+@media (max-width: 1050px) {
+  .contact .navigation {
+    position: unset;
+  }
+}
+
+.contact .hamburger {
+  top: 5px;
+  right: -10%;
+}
+
+.contact img {
+  max-height: 455px;
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 615px) {
+  .contact img {
+    -o-object-position: -228px;
+       object-position: -228px;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -767,6 +842,15 @@ html {
 
 .skipLink:focus {
   left: 10px;
+}
+
+.outerWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.comments.outerWrapper {
+  margin-left: 0;
 }
 
 button {
@@ -816,6 +900,32 @@ a.button:hover, button[type="submit"]:hover {
 h1 {
   text-transform: uppercase;
   font-family: 'Kumar One Outline', cursive;
+  font-size: 5.6rem;
+  position: absolute;
+  top: 10%;
+  left: 18%;
+  width: 400px;
+}
+
+@media (max-width: 830px) {
+  h1 {
+    font-size: 3rem;
+    width: 100px;
+    top: 30px;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 625px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    left: 30px;
+  }
 }
 
 h2, h3, h4, h5, a, label, button {
@@ -864,6 +974,7 @@ p, aside li {
 body {
   background: #e0fddf;
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 img {
@@ -909,35 +1020,6 @@ header.home {
     width: 600px;
     -webkit-transform: translateX(-38%);
             transform: translateX(-38%);
-  }
-}
-
-header.home > img h1 {
-  font-size: 5.6rem;
-  position: absolute;
-  top: 10%;
-  left: 18%;
-  width: 400px;
-}
-
-@media (max-width: 830px) {
-  header.home > img h1 {
-    font-size: 3rem;
-    width: 100px;
-    top: 30px;
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: 625px) {
-  header.home > img h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  header.home > img h1 {
-    left: 30px;
   }
 }
 
@@ -1018,7 +1100,7 @@ header .navigation {
           transform: scaleX(1.5);
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .hamburger i {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);

@@ -11,26 +11,28 @@
 </head>
 <body>
     <header class="blogHeader">
-        <div class="topBar">
-            <div class="logo">
-                <h5 class="allCaps">Sanctuary Helpers</p>
+        <div class="outerWrapper">
+            <div class="topBar">
+                <div class="logo">
+                    <h5 class="allCaps">Sanctuary Helpers</p>
+                </div>
+                <nav class="navigation">
+                    <button class="hamburger">
+                        <i class="fas fa-bars"></i><span class="visuallyHidden">Menu</span>
+                    </button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navigation">
-                <button class="hamburger">
-                    <i class="fas fa-bars"></i><span class="visuallyHidden">Menu</span>
-                </button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>Blog</h1>
         </div>
-        <h1>Blog</h1>
     </header>   
     <main>
-        <div class="blogAside">
+        <div class="blogAside outerWrapper">
             <section class="blog">
                 <div class="imageContainer">
                     <img src="assets/blog-post-image.jpg" alt="Cyan poster-style day bed with creme cushions and duvet in bright room with diamond-patterned floor.">
@@ -67,7 +69,7 @@
             </aside>
         </div>  <!-- end div .blogAside -->
     </main>
-    <section class="comments">
+    <section class="comments outerWrapper">
         <div class="wrapper">
             <h3>Comments:</h3>
             <article>
@@ -104,7 +106,10 @@
         </div>
     </section>  <!-- end section.comments -->
     <footer>
-        <p>Copyright © 2019 HackerYou</p>
+
+        <div class="outerWrapper">
+            <p>Copyright © 2019 HackerYou</p>
+        </div>
     </footer>
 </body>
 </html>

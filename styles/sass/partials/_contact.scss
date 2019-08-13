@@ -1,0 +1,77 @@
+// ===========contact header styles==========
+
+.contact {
+    h1 {
+    width: 500px;
+    left: 10%;
+    top: 130px;
+
+        @include mq(960) {
+            font-size: 4.6rem;
+        }
+
+        @include mq(830) {
+            top: 120px;
+        }
+
+        @include mq(700) {
+            top: 100px;
+            width: 200px;
+        }
+
+    }
+
+    .outerWrapper {
+        position: relative;
+    }
+
+    .topWrapper {
+        width: 80%;
+        // max-width: 1280px;
+        // margin: 0 auto;
+        position: absolute;
+        top:0;
+        left: 10%;
+    }
+
+    ul {
+        position: relative;
+        right: -30px;
+        // top: 50px;
+        // right: 0;
+    }
+
+    h5 {
+        position: unset;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 20px;
+
+        // This media query is added to take position absolute off of the .navigation element so that the hamburger is no longer positioned relative to the nav and is instead positioned relative to the body.
+        @include mq(1050) {
+            position: unset;
+        }
+        
+    }
+
+    .hamburger {
+        top:5px;
+        right: -10%;
+    }
+
+    img {
+        max-height: 455px;
+        min-height:300px;
+        object-fit: cover;
+
+        @include mq(615) {
+            object-position: -228px;
+        }
+    }
+
+
+
+
+}
