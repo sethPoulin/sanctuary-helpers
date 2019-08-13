@@ -732,6 +732,7 @@ form .formBox.comment textarea {
   background-color: transparent;
   padding-top: 30px;
   border: none;
+  padding-left: 30px;
 }
 
 html {
@@ -888,7 +889,7 @@ h6 {
   font-weight: bold;
 }
 
-p, aside li {
+p, aside li, textarea {
   font-family: 'Lato', sans-serif;
   line-height: 2.5rem;
   font-size: 1.6rem;
@@ -1591,9 +1592,51 @@ header.blog {
   }
 }
 
+.contactBottom .wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 760px) {
+  .contactBottom .wrapper {
+    display: block;
+  }
+}
+
+@media (max-width: 520px) {
+  .contactBottom .wrapper {
+    margin-bottom: 80px;
+    width: 100%;
+  }
+}
+
+.contactBottom .wrapper .formContents {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contactBottom .wrapper button {
+  margin-top: 40px;
+}
+
 .commentBottomLeft {
   width: 70%;
   margin-bottom: -30px;
+}
+
+@media (max-width: 870px) {
+  .commentBottomLeft {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 760px) {
+  .commentBottomLeft {
+    width: 100%;
+  }
 }
 
 .commentBottomLeft form {
@@ -1607,25 +1650,69 @@ header.blog {
   padding-bottom: 40px;
 }
 
-.contactBottom .wrapper {
-  width: 90%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 870px) {
+  .commentBottomLeft form {
+    position: static;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
-.contactBottom .wrapper .formContents {
-  width: 90%;
-  margin: 0 auto;
+@media (max-width: 520px) {
+  .commentBottomLeft form {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-bottom: 15px solid #f8fb05;
+  }
 }
 
-.contactBottom .wrapper button {
-  margin-top: 40px;
+@media (max-width: 870px) {
+  .commentBottomLeft fieldset {
+    display: block;
+  }
+}
+
+@media (max-width: 870px) {
+  .commentBottomLeft .formBox.name, .commentBottomLeft .formBox.email {
+    width: 100%;
+  }
+}
+
+@media (max-width: 870px) {
+  .commentBottomLeft .formBox.name {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 870px) {
+  .commentBottomLeft .formBox.email {
+    margin-left: 0;
+  }
 }
 
 .commentBottomRight {
   padding-left: 11%;
+}
+
+@media (max-width: 760px) {
+  .commentBottomRight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 760px) and (max-width: 520px) {
+  .commentBottomRight {
+    display: block;
+    padding: 0;
+  }
+}
+
+.commentBottomRight nav {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
 }
 
 .commentBottomRight ul {
@@ -1636,6 +1723,28 @@ header.blog {
   padding-left: 0;
   position: relative;
   left: -12px;
+}
+
+@media (max-width: 760px) {
+  .commentBottomRight ul {
+    margin-top: 0;
+    margin: 0 auto;
+    width: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .commentBottomRight ul {
+    margin: 0 auto;
+    width: 200px;
+    -webkit-transform: translateX(12%);
+            transform: translateX(12%);
+  }
+}
+
+.commentBottomRight li {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 
 .commentBottomRight a {
@@ -1650,6 +1759,37 @@ header.blog {
 
 .commentBottomRight p.email {
   margin: 15px 0;
+}
+
+@media (max-width: 760px) {
+  .commentBottomRight p.email {
+    -ms-flex-preferred-size: 37%;
+        flex-basis: 37%;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .commentBottomRight p.email {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .commentBottomRight .phoneAddress {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .commentBottomRight .phoneAddress {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .commentBottomRight p {

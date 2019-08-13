@@ -70,25 +70,19 @@
     }
 }
 
-.commentBottomLeft {
-    width: 70%;
-    margin-bottom: -30px;
-
-    form {
-        width: 100%;
-        background: $white;
-        box-shadow: 20px 20px 0 -5px $brightYellow;
-        position: relative;
-        top: -120px;
-        left: 20px;
-        padding-bottom: 40px;
-    }
-}
-
 .contactBottom .wrapper {
     width: 90%;
     margin: 0 auto;
     display: flex;
+
+    @include mq(760) {
+        display: block;
+    }
+
+    @include mq(520) {
+        margin-bottom: 80px;
+        width: 100%;
+    }
 
     .formContents {
         width: 90%;
@@ -100,8 +94,85 @@
     }
 }
 
+.commentBottomLeft {
+    width: 70%;
+    margin-bottom: -30px;
+
+    @include mq(870) {
+        margin-bottom: 80px;
+    }
+
+    @include mq(760) {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        background: $white;
+        box-shadow: 20px 20px 0 -5px $brightYellow;
+        position: relative;
+        top: -120px;
+        left: 20px;
+        padding-bottom: 40px;
+
+        @include mq(870) {
+            position: static;
+            padding-left:20px;
+            padding-right: 20px;
+        }
+
+        @include mq(520) {
+            box-shadow: none;
+            border-bottom: 15px solid $brightYellow;
+        }
+    }
+
+    fieldset {
+        @include mq(870) {
+            display: block;
+        }
+    }
+
+    .formBox.name, .formBox.email {
+        @include mq(870) {
+            width: 100%;
+            }
+    }
+
+    .formBox.name {
+         @include mq(870) {
+        margin-right: 0;
+        }
+    }
+
+    .formBox.email {
+        @include mq(870) {
+        margin-left: 0;
+        }
+    }
+}
+
+
+
 .commentBottomRight {
     padding-left: 11%; 
+
+    @include mq(760) {
+        display: flex;
+        padding-bottom: 50px;
+
+        @include mq(520) {
+            display: block;
+            padding: 0;
+        }
+
+
+    }
+
+    nav {
+        flex-basis: 33%;
+
+    }
     
     ul {
         display: flex;
@@ -109,6 +180,22 @@
         padding-left: 0;
         position: relative;
         left: -12px;
+        
+        @include mq(760) {
+            margin-top: 0;
+            margin: 0 auto;
+            width: 200px;
+        }
+
+        @include mq(520) {
+            margin: 0 auto;
+            width: 200px;
+            transform: translateX(12%);
+        }
+    }
+
+    li {
+        flex-basis: 25%;
     }
 
     a {
@@ -121,14 +208,38 @@
         }
     }
 
-
     p.email {
         margin: 15px 0;
+
+        @include mq(760) {
+            flex-basis: 37%;
+            margin-top: 0;
+            text-align: center;
+        } 
+
+        @include mq(520) {
+            padding-top: 20px;
+        }
+    }
+
+    .phoneAddress {
+        @include mq(760) {
+            flex-basis: 33%;
+            margin: 0 auto;
+        }
+
+        @include mq(520) {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
     }
 
     p {
         padding-bottom: 0;
         line-height: 2.5rem;
     }
+
+
 }
 
