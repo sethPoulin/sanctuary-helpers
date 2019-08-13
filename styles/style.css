@@ -779,13 +779,14 @@ form .formBox.comment textarea {
   position: unset;
 }
 
-.contact .navigation {
-  position: absolute;
+.contact .topWrapper .navigation.contactNav {
   top: 20px;
+  background: red;
+  position: relative;
 }
 
 @media (max-width: 1050px) {
-  .contact .navigation {
+  .contact .topWrapper .navigation.contactNav {
     position: unset;
   }
 }

@@ -17,7 +17,7 @@
                 <div class="logo">
                     <h5 class="allCaps">Sanctuary Helpers</h5>
                 </div>
-                <nav class="navigation">
+                <nav class="navigation contactNav">
                     <button class="hamburger">
                         <i class="fas fa-bars"></i><span class="visuallyHidden">Menu</span>
                     </button>
@@ -36,6 +36,22 @@
         <div class="commentBottomLeft">
             <form action="">
                 <fieldset class="userComment">
+                    <div class="formBox name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="comment" placeholder="">
+                    </div>
+                    <div class="formBox email">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="comment" placeholder="">
+                    </div>
+                    <div class="formBox comment">
+                        <label for="commentArea">Comment</label>
+                        <textarea name="comment" id="commentArea" cols="30" rows="10"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form><!-- <form action="">
+                <fieldset class="userComment">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="message" placeholder="">
                     <label for="email">Email address</label>
@@ -44,7 +60,7 @@
                     <textarea name="message" id="messageArea" cols="30" rows="10"></textarea>
                 </fieldset>
                 <button type="submit">Submit</button>
-            </form>
+            </form> -->
         </div>
         <div class="commentBottomRight">         
             <nav class="social">

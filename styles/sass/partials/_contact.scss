@@ -18,7 +18,6 @@
             top: 100px;
             width: 200px;
         }
-
     }
 
     .outerWrapper {
@@ -45,9 +44,12 @@
         position: unset;
     }
 
-    .navigation {
-        position: absolute;
+    // added extra specificity to override styles set in styles.scss
+
+    .topWrapper .navigation.contactNav {
         top: 20px;
+        background: red;
+        position: relative;
 
         // This media query is added to take position absolute off of the .navigation element so that the hamburger is no longer positioned relative to the nav and is instead positioned relative to the body.
         @include mq(1050) {
@@ -69,6 +71,10 @@
         @include mq(615) {
             object-position: -228px;
         }
+    }
+
+    form {
+
     }
 
 
