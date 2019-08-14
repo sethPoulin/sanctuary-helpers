@@ -782,10 +782,11 @@ html {
   z-index: 999;
   background: white;
   color: black;
+  font-size: 2rem;
 }
 
 .skipLink:focus {
-  left: 10px;
+  left: 40px;
 }
 
 .outerWrapper {
@@ -806,19 +807,6 @@ a.skipLink {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-}
-
-.skipLink {
-  position: absolute;
-  left: -1000px;
-  top: 5px;
-  z-index: 999;
-  background: white;
-  color: black;
-}
-
-.skipLink:focus {
-  left: 0;
 }
 
 a {

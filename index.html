@@ -32,8 +32,14 @@
             <img src="assets/header-box.png" alt="Two modern blue sofa chairs side by side, one with a grey cushion on it.">   
         </div>
     </header>
+
+    <!-- =======main content========= -->
+
     
     <section class="main" id="maincontent">
+
+    <!-- ======about section======= -->
+       
         <section class="about" id="about">
             <div class="wrapper">
                 <div class="leftSide">
@@ -46,9 +52,11 @@
                     <div class="imageContainer">
                         <img src="assets/small-box.jpg" alt="Living room with beige couch, large lamp, abstract painting in pastel colours, glass table with star sculpture on top of it.">
                     </div>
-                </div>   <!-- end .rightSide -->
-            </div>  <!-- end .wrapper -->
-        </section>
+                </div>  <!-- end .rightSide -->
+            </div>    <!-- end .wrapper -->
+        </section>  <!-- end section about -->
+
+        <!-- =====gallery section====== -->
         
         <section class="gallery">
             <ul class="gallery">
@@ -62,8 +70,10 @@
                     <img src="assets/gallery-image-3.jpg" alt="Close up of cone-shaped chair with backing made of long stretchy fibres.">
                 </li>
             </ul>
-        </section>
+        </section>  <!-- end of gallery section -->
         
+        <!-- ======Resources section===== -->
+
         <section class="resources">
             <div class="wrapper">
                 <div class="bullet bullet1">
@@ -95,8 +105,10 @@
                     </div>
                 </div>
             </div>
-        </section>  <!-- end of section.resources -->
-    </section>   <!-- end of main -->
+        </section>  <!-- end of resources -->
+    </section>   <!-- end of main content-->
+
+    <!-- =========More info section============= -->
 
     <section class="moreInfo">
         <div class="topStrip">
@@ -128,13 +140,15 @@
         </div>        
     </section>   <!-- end of section.moreInfo -->
 
+    <!-- ============Search section============= -->
+
     <section class="search">
         <div class="justifyCenter">
             <h3 class="allCaps">Search by style</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab voluptate nesciunt saepe cum ut et possimus quam officiis assumenda harum accusantium ipsa itaque, libero cupiditate. Molestiae voluptate inventore perspiciatis corporis. Non delectus facere soluta impedit saepe dolorum vitae veritatis officia aut, quasi itaque sint, rerum deleniti iure, mollitia aliquam! Ipsa, labore! Adipisci?</p>
             <a href="#searchByStyle" class="button">Find out more</a>
         </div>
-    </section>
+    </section>  <!-- end of search section -->
 
     <footer>
         <p>Copyright © 2019 HackerYou</p>
@@ -151,19 +165,13 @@
             $('.headerExit').addClass('block');
         });
     
-        // $('header nav li').click(function(){
-        //     $('header nav ul').removeClass('visible');
-        //     $('.header-exit').removeClass('block');
-        // });
-    
         $('.headerExit').click(function(){
             $('.navigation ul').removeClass('visible');
             $(this).removeClass('block');
             $('.hamburger').removeClass('transparent');
         })
     });
-    
-    </script>
+</script>
 
 </body>
 </html>
