@@ -741,6 +741,12 @@ html {
   background-color: #cfcccc;
 }
 
+body {
+  background: #e0fddf;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .allCaps {
   text-transform: uppercase;
 }
@@ -767,14 +773,6 @@ html {
   right: 0;
 }
 
-.headerExit.block {
-  display: block;
-  position: absolute;
-  z-index: 10;
-  right: 20px;
-  top: 20px;
-}
-
 .skipLink {
   position: absolute;
   left: -1000px;
@@ -782,6 +780,9 @@ html {
   z-index: 999;
   background: white;
   color: black;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   font-size: 2rem;
 }
 
@@ -801,12 +802,6 @@ html {
 button {
   border: none;
   background: transparent;
-}
-
-a.skipLink {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
 }
 
 a {
@@ -908,10 +903,12 @@ p, aside li, textarea, .headerExit {
   display: none;
 }
 
-body {
-  background: #e0fddf;
-  max-width: 1280px;
-  margin: 0 auto;
+.headerExit.block {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 20px;
 }
 
 img {

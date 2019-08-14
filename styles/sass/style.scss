@@ -1,13 +1,22 @@
+
+// ======partials=========
+
 @import "partials/variables.scss";
 @import "partials/setup.scss";
 @import "partials/mixins.scss";
 @import "partials/blog.scss";
 
-
+// =========general styles=======
 
 html {
     font-size: 62.5%;
     background-color: rgb(207, 204, 204);
+}
+
+body {
+    background:$ice;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .allCaps {
@@ -36,16 +45,6 @@ html {
     right: 0;
 }
 
-
-.headerExit.block {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    right: 20px;
-    top: 20px;
-}
-
-
 .skipLink {
     position: absolute;
     left: -1000px;
@@ -53,9 +52,12 @@ html {
     z-index: 999;
     background: white;
     color: black;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 2rem;
 }
-  
+
 .skipLink:focus {
         left: 40px;
 }
@@ -69,19 +71,9 @@ html {
     margin-left: 0;
 }
 
-
-
 button {
     border: none;
     background: transparent;
-}
-
-
-
-a.skipLink {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
 }
 
 a {
@@ -103,7 +95,6 @@ a.button, button[type="submit"] {
         color: $evergreen;
     }
 }
-
 
 h1 {
     text-transform: uppercase;
@@ -176,10 +167,14 @@ p, aside li, textarea, .headerExit {
     display: none;
 }
 
-body {
-    background:$ice;
-    max-width: 1280px;
-    margin: 0 auto;
+// Class .block is added to exit button on drop down menu with jQuery when hamburger is clicked.
+
+.headerExit.block {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
 }
 
 img {
@@ -193,9 +188,7 @@ img {
     flex-direction: column;
 }
 
-
 // ===========home header styles===============
-
 
 header.home {
     position: relative;
@@ -238,7 +231,7 @@ header .navigation {
 .navigation ul {
     display: flex;
 
-    // Styling for drop down menu.  Hidden until hamburger is clicked with right: -5000px.
+    // Styling for drop down menu.  Hidden with right: -5000px until hamburger is clicked.
 
     @include mq(1050) {
         flex-direction: column;
@@ -301,10 +294,7 @@ header .navigation {
     }
 }
 
-
-
-.hamburger {
-    
+.hamburger {    
     display: none;
     position: absolute;
     top:0px;
@@ -325,30 +315,28 @@ header .navigation {
     }
 }
 
-
 // home about styles==========================
 
-
 .about {
-
     background: $white;
+    
     @include mq(825){
         background: rgb(230, 228, 228);
     }
     
     .wrapper {
-    width: 80%;
-    padding-top: 180px;
-    padding-bottom: 100px;
-    display: flex;
-    margin: 0 auto;
+        width: 80%;
+        padding-top: 180px;
+        padding-bottom: 100px;
+        display: flex;
+        margin: 0 auto;
 
-    @include mq(825) {
-        flex-direction: column;
-        padding: 0;
-        width: 100%;    
+        @include mq(825) {
+            flex-direction: column;
+            padding: 0;
+            width: 100%;    
+            }
         }
-    }
 
     .leftSide {
         width: 60%;
@@ -389,6 +377,7 @@ header .navigation {
     .imageContainer {
         width: 55%;
         margin: 0 auto;
+        
         @include bxs(-15,15);
 
         @include mq(860){
@@ -459,7 +448,6 @@ header .navigation {
             grid-gap: 5%;
             padding: 40px 0;
         }
-
     }
 
     li {
@@ -476,9 +464,7 @@ header .navigation {
         @include mq(625){
             display: none;
         }
-   
-    }
-    
+    }  
 }
 
 // ==========home resources styles==================
@@ -608,7 +594,7 @@ header .navigation {
             flex-direction: column;  
         }
 
-        p{
+        p {
             text-align: right;
         }
     }
@@ -713,14 +699,14 @@ header .navigation {
 
 .middleStrip {
 
+    margin-bottom: 50px;
+
     @include mq(1010) {
         .container {
         padding: 0;
         }
     }
         
-    margin-bottom: 50px;
-    
     img {
         width: 85%;
         position: absolute;
@@ -761,9 +747,7 @@ header .navigation {
 footer {
     background: $black;
     color: $white;
-    // text-align: center;
     display: flex;
-    // margin: auto;
     align-items: center;
     justify-content: center;
 
@@ -771,10 +755,8 @@ footer {
     p {
         padding: 0;
         display: inline-block;
-        line-height: 4.2rem;
-        
+        line-height: 4.2rem; 
     }
-
 }
 
 
@@ -785,6 +767,8 @@ header.blog {
     background-image: url(../assets/blog-image.jpg);
     background-size: cover;
 }
+
+// contact partials imported at end of document to circumvent potential specificity conflicts
 
 @import "partials/contact.scss";
 
