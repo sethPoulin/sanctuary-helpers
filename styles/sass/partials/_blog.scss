@@ -21,6 +21,8 @@ h2 {
 
 .blogHeader {
     height: 83vh;
+    // max-height added to prevent header from growing too tall and breaking layout
+    max-height:568px;
     background-image: url(../assets/blog-image.jpg);
     background-size: auto;
     background-position: -250px 0;

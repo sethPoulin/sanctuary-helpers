@@ -1,6 +1,7 @@
 // ===========contact header styles==========
 
 .contact {
+
     h1 {
     width: 500px;
     left: 10%;
@@ -18,16 +19,29 @@
             top: 100px;
             width: 200px;
         }
+
+        @include mq(440) {
+            font-size: 4rem;
+            top: 120px;
+        }
+
+        @include mq(340) {
+            width: 50px;
+            top: 150px;
+        }
     }
 
+    .headerExit {
+        right: -8%;
+        top: 40px;
+    }
+    
     .outerWrapper {
         position: relative;
     }
 
     .topWrapper {
         width: 80%;
-        // max-width: 1280px;
-        // margin: 0 auto;
         position: absolute;
         top:0;
         left: 10%;
@@ -35,16 +49,26 @@
 
     ul {
         position: relative;
-        right: -30px;
+        right: 0;
+        
+        
+        @include mq(1050) {
+            right: -5000px;
+        }   
+    }
+
+    // styling for ul when hamburger is clicked
+
+    ul.visible {
+        right: -75%;
+        top: -30px;
     }
 
     h5 {
         position: unset;
     }
 
-    // added extra specificity to override .navigation styles set in styles.scss
-
-    .topWrapper .navigation.contactNav {
+    .topWrapper .navigation {
         top: 20px;
         right: 0;
 
@@ -67,8 +91,18 @@
         @include mq(615) {
             object-position: -228px;
         }
+
+        @include mq(440) {
+            object-position: -300px;
+        }
+
+        @include mq(340) {
+            object-position: -340px;
+        }
     }
 }
+
+// ===========contact bottom section styles==========
 
 .contactBottom .wrapper {
     width: 90%;
@@ -80,7 +114,6 @@
     }
 
     @include mq(520) {
-        margin-bottom: 80px;
         width: 100%;
     }
 
@@ -93,6 +126,8 @@
         margin-top: 40px;
     }
 }
+
+// ===========contact bottom left styles==========
 
 .commentBottomLeft {
     width: 70%;
@@ -152,26 +187,24 @@
     }
 }
 
-
+// ===========contact bottom right styles==========
 
 .commentBottomRight {
     padding-left: 11%; 
+    padding-bottom: 50px;
 
     @include mq(760) {
         display: flex;
-        padding-bottom: 50px;
-
-        @include mq(520) {
-            display: block;
-            padding: 0;
-        }
-
-
+        padding-left: 0;
+    }
+        
+    @include mq(600) {
+    display: block;
+    padding-bottom: 70px;
     }
 
     nav {
-        flex-basis: 33%;
-
+        flex-basis: 33.33%;
     }
     
     ul {
@@ -185,12 +218,12 @@
             margin-top: 0;
             margin: 0 auto;
             width: 200px;
+            transform: translateX(12%);
         }
 
-        @include mq(520) {
+        @include mq(600) {
             margin: 0 auto;
-            width: 200px;
-            transform: translateX(12%);
+            width: 200px;    
         }
     }
 
@@ -212,23 +245,23 @@
         margin: 15px 0;
 
         @include mq(760) {
-            flex-basis: 37%;
+            flex-basis: 33.33%;
             margin-top: 0;
             text-align: center;
         } 
 
-        @include mq(520) {
+        @include mq(600) {
             padding-top: 20px;
         }
     }
 
     .phoneAddress {
         @include mq(760) {
-            flex-basis: 33%;
+            flex-basis: 33.33%;
             margin: 0 auto;
         }
 
-        @include mq(520) {
+        @include mq(600) {
             margin: 0 auto;
             width: 100%;
             text-align: center;
@@ -239,7 +272,5 @@
         padding-bottom: 0;
         line-height: 2.5rem;
     }
-
-
 }
 

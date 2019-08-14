@@ -7,6 +7,7 @@
 
 html {
     font-size: 62.5%;
+    background-color: rgb(207, 204, 204);
 }
 
 .allCaps {
@@ -24,6 +25,26 @@ html {
 .flex {
     display: flex;
 }
+
+.transparent {
+    opacity: 0;
+}
+
+// class .visible is added with jQuery to slide drop down menu into view when hamburger menu is clicked.
+
+.navigation .visible {
+    right: 0;
+}
+
+
+.headerExit.block {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+}
+
 
 .skipLink {
     position: absolute;
@@ -47,10 +68,14 @@ html {
     margin-left: 0;
 }
 
+
+
 button {
     border: none;
     background: transparent;
 }
+
+
 
 a.skipLink {
     text-align: center;
@@ -139,12 +164,17 @@ h6 {
     font-weight: bold;
 }
 
-p, aside li, textarea {
+p, aside li, textarea, .headerExit {
     font-family: 'Lato', sans-serif;
     line-height: 2.5rem;
     font-size: 1.6rem;
     padding-bottom: 15px;
     letter-spacing: 0.1rem;
+}
+
+.headerExit {
+    font-size: 2.8rem;
+    display: none;
 }
 
 body {
@@ -188,10 +218,7 @@ header.home > img {
         width: 600px;
         transform: translateX(-38%);
     }
-
 }
-
-
 
 header.home .imageContainer {
     width: 55%;
@@ -212,13 +239,42 @@ header .navigation {
 .navigation ul {
     display: flex;
 
+    // Styling for drop down menu.  Hidden until hamburger is clicked with right: -5000px.
+
     @include mq(1050) {
-        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 280px;
+        height: 320px;
+        position: absolute;
+        background: rgba(133, 133, 133, 0.8);
+        padding: 0 5px;
+        top: 0;
+        right: -5000px;
+        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: 0.3s;
     }
   
     li {
         padding: 0;
         position: relative;
+
+        @include mq(1050) {  
+            padding: 15px 15px;
+            list-style: none;
+            position: relative;
+            &:after {
+                content:'';
+                width:66%;
+                height:1px;
+                background:rgba(255,255,255,0.5);
+                position: absolute;
+                left: 17%;
+                right: 17%;
+                top: 100%;
+            }
+        }
     }
 
     a {
@@ -245,6 +301,8 @@ header .navigation {
         display: unset;
     }
 }
+
+
 
 .hamburger {
     

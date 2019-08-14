@@ -20,6 +20,7 @@
                     <button class="hamburger">
                         <i class="fas fa-bars"></i><span class="visuallyHidden">Menu</span>
                     </button>
+                    <button class=headerExit><span aria-hidden>X</span><span class="visuallyHidden">Close</span></button>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#about">About</a></li>
@@ -111,5 +112,24 @@
             <p>Copyright © 2019 HackerYou</p>
         </div>
     </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        
+        $('.hamburger').click(function(){
+            console.log('clicked!');
+            $('.hamburger').addClass('transparent');
+            $('.navigation ul').addClass('visible');
+            $('.headerExit').addClass('block');
+        });
+    
+        $('.headerExit').click(function(){
+            $('.navigation ul').removeClass('visible');
+            $(this).removeClass('block');
+            $('.hamburger').removeClass('transparent');
+        })
+    });
+    
+</script>
 </body>
 </html>
